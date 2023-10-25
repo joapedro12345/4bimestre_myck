@@ -5,7 +5,7 @@ CREATE TRIGGER novo_cliente AFTER INSERT ON Clientes
 CREATE TRIGGER exclusao_cliente BEFORE DELETE ON Clientes
 	FOR EACH ROW INSERT INTO Auditoria VALUES("Houve uma tentativa de exclusão de um cliente");
 
-
+--3--
 DELIMITER //
 CREATE TRIGGER att_cliente AFTER UPDATE ON Clientes
 	FOR EACH ROW
@@ -20,4 +20,3 @@ CREATE TRIGGER att_cliente AFTER UPDATE ON Clientes
 	END //
 DELIMITER ;
 
---3--
